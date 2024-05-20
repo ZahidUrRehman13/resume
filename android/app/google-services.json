@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "260466718218",
+    "project_id": "introduction-resume",
+    "storage_bucket": "introduction-resume.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:260466718218:android:9443dda4a43a50f6b111f3",
+        "android_client_info": {
+          "package_name": "com.example.introduction"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA7UQTi0KVKe0RUqgEgG-_LgJfycwk9A0I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
