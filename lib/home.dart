@@ -80,12 +80,13 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Padding(
-                        padding: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 20.0),
+                        padding: const EdgeInsets.symmetric(vertical: 16.0, horizontal: 20.0),
                         child: Text(
                           "Hello there! Eng Zahid Ur Rehman",
                           style: GoogleFonts.montserrat(
                             color: Colors.white,
-                            fontSize: 18.0,
+                            // fontSize: 18.0,
+                            fontSize: (width * height) / 50*0.0015,
                             fontWeight: FontWeight.w600,
                           ),
                           overflow: TextOverflow.ellipsis,
@@ -116,14 +117,14 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                                   "zahidrehman507@gmail.com",
                                   style: GoogleFonts.roboto(
                                     color: Colors.white,
-                                    fontSize: 13.0,
+                                    fontSize: (width * height) / 50*0.0008,
                                     fontWeight: FontWeight.w600,
                                   ),
                                   overflow: TextOverflow.ellipsis,
                                 ),
                               ],
                             ),
-                            SizedBox(width: width*0.05,),
+                            SizedBox(width: width*0.03,),
                             Row(
                               children: [
                                 const Icon(Icons.phone,color: Colors.white,),
@@ -132,14 +133,14 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                                   "+971561150021",
                                   style: GoogleFonts.roboto(
                                     color: Colors.white,
-                                    fontSize: 13.0,
+                                    fontSize: (width * height) / 50*0.0008,
                                     fontWeight: FontWeight.w600,
                                   ),
                                   overflow: TextOverflow.ellipsis,
                                 ),
                               ],
                             ),
-
+                        
                           ],
                         ),
                       ),
@@ -149,253 +150,243 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
               ),
             ),
             Positioned(
-              top: height * 0.194,
-              left: width * 0.79,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  const SizedBox(),
-                  Container(
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(15.0),
-                      image: const DecorationImage(
-                        image: AssetImage(
-                          "zahid.png",
-                        ),
-                        fit: BoxFit.cover,
-                      ),
-                    ),
-                    height: height*0.3,
-                    width: width*0.3,
-                  )
-                ],
+              top: height * 0.14,
+              left: width * 0.72,
+              child:   CircleAvatar(
+                backgroundImage: const AssetImage("assets/zahid.png"),
+                backgroundColor: Colors.white,
+                radius: height*width*0.000015,
               ),
             ),
+
             Positioned(
               top: height * 0.4,
               left: width * 0.01,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  Container(
-                    height: height * 0.075,
-                    width: width * 0.075,
-                    decoration: BoxDecoration(
-                      shape: BoxShape.circle,
-                      border: Border.all(
-                        color: Colors.white,
-                        width: 1, // Set the border width
-                      ),
-                      // borderRadius: BorderRadius.circular(10.0),
-                    ),
-                    child: Center(
-                      // child: Icon(Icons.apple,color: Colors.white,size: 50.00,),
-                      child: Container(
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(15.0),
-                          image: const DecorationImage(
-                            image: AssetImage(
-                              "assets/flutter.png",
-                            ),
-                            fit: BoxFit.cover,
-                          ),
+              child: SizedBox(
+                width: width,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    Container(
+                      height: height * 0.075,
+                      width: width * 0.075,
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        border: Border.all(
+                          color: Colors.white,
+                          width: 1, // Set the border width
                         ),
-                        height: 35,
-                        width: 35,
+                        // borderRadius: BorderRadius.circular(10.0),
                       ),
-                    ),
-                  ),
-                  Container(
-                    height: height * 0.075,
-                    width: width * 0.075,
-                    decoration: BoxDecoration(
-                      shape: BoxShape.circle,
-                      border: Border.all(
-                        color: Colors.white,
-                        width: 1, // Set the border width
-                      ),
-                      // borderRadius: BorderRadius.circular(10.0),
-                    ),
-                    child: Center(
-                      // child: Icon(Icons.apple,color: Colors.white,size: 50.00,),
-                      child: Container(
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(15.0),
-                          image: const DecorationImage(
-                            image: AssetImage(
-                              "assets/android.png",
+                      child: Center(
+                        // child: Icon(Icons.apple,color: Colors.white,size: 50.00,),
+                        child: Container(
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(15.0),
+                            image: const DecorationImage(
+                              image: AssetImage(
+                                "assets/flutter.png",
+                              ),
+                              fit: BoxFit.cover,
                             ),
-                            fit: BoxFit.cover,
                           ),
+                          height: 35,
+                          width: 35,
                         ),
-                        height: 50,
-                        width: 50,
                       ),
                     ),
-                  ),
-                  Container(
-                    height: height * 0.075,
-                    width: width * 0.075,
-                    decoration: BoxDecoration(
-                      shape: BoxShape.circle,
-                      border: Border.all(
-                        color: Colors.white,
-                        width: 1, // Set the border width
+                    Container(
+                      height: height * 0.075,
+                      width: width * 0.075,
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        border: Border.all(
+                          color: Colors.white,
+                          width: 1, // Set the border width
+                        ),
+                        // borderRadius: BorderRadius.circular(10.0),
                       ),
-                    ),
-                    child: Center(
-                      // child: Icon(Icons.apple,color: Colors.white,size: 50.00,),
-                      child: Container(
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(15.0),
-                          image: const DecorationImage(
-                            image: AssetImage(
-                              "apple-logo.png",
+                      child: Center(
+                        // child: Icon(Icons.apple,color: Colors.white,size: 50.00,),
+                        child: Container(
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(15.0),
+                            image: const DecorationImage(
+                              image: AssetImage(
+                                "assets/android.png",
+                              ),
+                              fit: BoxFit.cover,
                             ),
-                            fit: BoxFit.cover,
                           ),
+                          height: 50,
+                          width: 50,
                         ),
-                        height: 35,
-                        width: 35,
                       ),
                     ),
-                  ),
-                  Container(
-                    height: height * 0.075,
-                    width: width * 0.075,
-                    decoration: BoxDecoration(
-                      shape: BoxShape.circle,
-                      border: Border.all(
-                        color: Colors.white,
-                        width: 1, // Set the border width
+                    Container(
+                      height: height * 0.075,
+                      width: width * 0.075,
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        border: Border.all(
+                          color: Colors.white,
+                          width: 1, // Set the border width
+                        ),
                       ),
-                    ),
-                    child: Center(
-                      // child: Icon(Icons.apple,color: Colors.white,size: 50.00,),
-                      child: Container(
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(15.0),
-                          image: const DecorationImage(
-                            image: AssetImage(
-                              "api.png",
+                      child: Center(
+                        // child: Icon(Icons.apple,color: Colors.white,size: 50.00,),
+                        child: Container(
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(15.0),
+                            image: const DecorationImage(
+                              image: AssetImage(
+                                "assets/apple-logo.png",
+                              ),
+                              fit: BoxFit.cover,
                             ),
-                            fit: BoxFit.cover,
                           ),
+                          height: 35,
+                          width: 35,
                         ),
-                        height: 35,
-                        width: 35,
                       ),
                     ),
-                  ),
-                  Container(
-                    height: height * 0.075,
-                    width: width * 0.075,
-                    decoration: BoxDecoration(
-                      shape: BoxShape.circle,
-                      border: Border.all(
-                        color: Colors.white,
-                        width: 1, // Set the border width
+                    Container(
+                      height: height * 0.075,
+                      width: width * 0.075,
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        border: Border.all(
+                          color: Colors.white,
+                          width: 1, // Set the border width
+                        ),
                       ),
-                    ),
-                    child: Center(
-                      // child: Icon(Icons.apple,color: Colors.white,size: 50.00,),
-                      child: Container(
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(15.0),
-                          image: const DecorationImage(
-                            image: AssetImage(
-                              "assets/firebase.png",
+                      child: Center(
+                        // child: Icon(Icons.apple,color: Colors.white,size: 50.00,),
+                        child: Container(
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(15.0),
+                            image: const DecorationImage(
+                              image: AssetImage(
+                                "assets/api.png",
+                              ),
+                              fit: BoxFit.cover,
                             ),
-                            fit: BoxFit.cover,
                           ),
+                          height: 35,
+                          width: 35,
                         ),
-                        height: 35,
-                        width: 35,
                       ),
                     ),
-                  ),
-                  Container(
-                    height: height * 0.075,
-                    width: width * 0.075,
-                    decoration: BoxDecoration(
-                      shape: BoxShape.circle,
-                      border: Border.all(
-                        color: Colors.white,
-                        width: 1, // Set the border width
+                    Container(
+                      height: height * 0.075,
+                      width: width * 0.075,
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        border: Border.all(
+                          color: Colors.white,
+                          width: 1, // Set the border width
+                        ),
                       ),
-                    ),
-                    child: Center(
-                      // child: Icon(Icons.apple,color: Colors.white,size: 50.00,),
-                      child: Container(
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(15.0),
-                          image: const DecorationImage(
-                            image: AssetImage(
-                              "Google-Play.png",
+                      child: Center(
+                        // child: Icon(Icons.apple,color: Colors.white,size: 50.00,),
+                        child: Container(
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(15.0),
+                            image: const DecorationImage(
+                              image: AssetImage(
+                                "assets/firebase.png",
+                              ),
+                              fit: BoxFit.cover,
                             ),
-                            fit: BoxFit.cover,
                           ),
+                          height: 35,
+                          width: 35,
                         ),
-                        height: 35,
-                        width: 35,
                       ),
                     ),
-                  ),
-                  Container(
-                    height: height * 0.075,
-                    width: width * 0.075,
-                    decoration: BoxDecoration(
-                      shape: BoxShape.circle,
-                      border: Border.all(
-                        color: Colors.white,
-                        width: 1, // Set the border width
+                    Container(
+                      height: height * 0.075,
+                      width: width * 0.075,
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        border: Border.all(
+                          color: Colors.white,
+                          width: 1, // Set the border width
+                        ),
                       ),
-                    ),
-                    child: Center(
-                      // child: Icon(Icons.apple,color: Colors.white,size: 50.00,),
-                      child: Container(
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(15.0),
-                          image: const DecorationImage(
-                            image: AssetImage(
-                              "Huawei_AppGallery.png",
+                      child: Center(
+                        // child: Icon(Icons.apple,color: Colors.white,size: 50.00,),
+                        child: Container(
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(15.0),
+                            image: const DecorationImage(
+                              image: AssetImage(
+                                "assets/Google-Play.png",
+                              ),
+                              fit: BoxFit.cover,
                             ),
-                            fit: BoxFit.cover,
                           ),
+                          height: 35,
+                          width: 35,
                         ),
-                        height: 35,
-                        width: 35,
                       ),
                     ),
-                  ),
-                  Container(
-                    height: height * 0.075,
-                    width: width * 0.075,
-                    decoration: BoxDecoration(
-                      shape: BoxShape.circle,
-                      border: Border.all(
-                        color: Colors.white,
-                        width: 1, // Set the border width
+                    Container(
+                      height: height * 0.075,
+                      width: width * 0.075,
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        border: Border.all(
+                          color: Colors.white,
+                          width: 1, // Set the border width
+                        ),
                       ),
-                    ),
-                    child: Center(
-                      // child: Icon(Icons.apple,color: Colors.white,size: 50.00,),
-                      child: Container(
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(15.0),
-                          image: const DecorationImage(
-                            image: AssetImage(
-                              "samsungStore.png",
+                      child: Center(
+                        // child: Icon(Icons.apple,color: Colors.white,size: 50.00,),
+                        child: Container(
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(15.0),
+                            image: const DecorationImage(
+                              image: AssetImage(
+                                "assets/Huawei_AppGallery.png",
+                              ),
+                              fit: BoxFit.cover,
                             ),
-                            fit: BoxFit.cover,
                           ),
+                          height: 35,
+                          width: 35,
                         ),
-                        height: 35,
-                        width: 35,
                       ),
                     ),
-                  ),
-                ],
+                    Container(
+                      height: height * 0.075,
+                      width: width * 0.075,
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        border: Border.all(
+                          color: Colors.white,
+                          width: 1, // Set the border width
+                        ),
+                      ),
+                      child: Center(
+                        // child: Icon(Icons.apple,color: Colors.white,size: 50.00,),
+                        child: Container(
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(15.0),
+                            image: const DecorationImage(
+                              image: AssetImage(
+                                "assets/samsungStore.png",
+                              ),
+                              fit: BoxFit.cover,
+                            ),
+                          ),
+                          height: 35,
+                          width: 35,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ),
             Positioned(
