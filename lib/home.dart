@@ -6,6 +6,8 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'dart:ui' as ui;
 
+import 'package:url_launcher/url_launcher.dart';
+
 class Home extends StatefulWidget {
   const Home({super.key});
 
@@ -17,16 +19,34 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
   late AnimationController _controller;
   List<String> projects = [
     'Saraab app UAE',
-    'Ezziclean laundary booking Application UAE',
-    'Estisharati User & Consultants Application UAE',
-    'Animals Lovers Mobile Application UAE',
-    'Zahib Driver & Zahib User Application UAE',
-    'Asmaky User & Asmaky vendor Application UAE',
-    'Fatima online Abaya shopping Application UAE',
-    'Mado User & Mado restuarant Application UAE',
+    'Ezziclean laundary booking Service UAE',
+    'Estisharati User',
+    'Estisharati Consultant',
+    'Animals Lovers Mobile UAE',
+    'Asmaky User',
+    'Asmaky vendor',
     'UAE SAFETY MOBILE APP UAE',
     'Novelflex Mobile app UAE',
+    'Fatima online Abaya shopping UAE',
+    'Mado User & Mado restuarant UAE',
+    'Zahib User & Zahib Driver UAE',
   ];
+
+  List<String> urls = [
+    'https://play.google.com/store/apps/details?id=ae.edes.saraab&hl=en&gl=US',
+    'https://play.google.com/store/apps/details?id=app.miracle.eeziclean&hl=en',
+    'https://play.google.com/store/apps/details?id=estisharatibussiness.users.com&hl=en&gl=US',
+    'https://play.google.com/store/apps/details?id=estisharati.bussiness.eshtisharati_consultants&hl=en&gl=US',
+    'https://play.google.com/store/apps/details?id=ae.edes.animallover&hl=en&gl=US',
+    'https://play.google.com/store/apps/details?id=ae.eds.asmaky&hl=en&gl=US',
+    'https://play.google.com/store/apps/details?id=ae.eds.asmakyshops&hl=en&gl=US',
+    'https://play.google.com/store/apps/details?id=com.safety.uae.app&hl=en&gl=US',
+    'https://play.google.com/store/apps/details?id=com.appcom.estisharati.novel.flex&hl=en&gl=US',
+    '',
+    '',
+    '',
+  ];
+
   @override
   void initState() {
     super.initState();
@@ -40,6 +60,12 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
   void dispose() {
     _controller.dispose();
     super.dispose();
+  }
+
+  Future<void> _launchInBrowserView(Uri url) async {
+    if (!await launchUrl(url, mode: LaunchMode.inAppBrowserView)) {
+      throw Exception('Could not launch $url');
+    }
   }
 
   @override
@@ -1928,41 +1954,64 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
               ),
               itemCount: projects.length,
               itemBuilder: (BuildContext context, int index) {
-                return Card(
-                  elevation: 4,
-                  margin: const EdgeInsets.all(16),
-                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(3.0)),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: [
-                      Expanded(
-                        flex: 3,
-                        child: Container(
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10),
-                            image: const DecorationImage(
-                              image: AssetImage("assets/bg_1234.jpg"),
-                              fit: BoxFit.cover,
+                return InkWell(
+                  onTap: () {
+                    if (urls[index].isNotEmpty) {
+                      _launchInBrowserView(Uri.parse(urls[index]));
+                    } else {
+                      final snackBar = SnackBar(
+                        content: Text(
+                          "Development in Progress",
+                          style: GoogleFonts.montserrat(
+                            color: Colors.black,
+                            fontSize: 12.0,
+                            fontWeight: FontWeight.w600,
+                          ),
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
+                        ),
+                        backgroundColor: Colors.white,
+                      );
+                      ScaffoldMessenger.of(context).showSnackBar(snackBar);
+                    }
+                  },
+                  child: Card(
+                    elevation: 4,
+                    margin: const EdgeInsets.all(16),
+                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(3.0)),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                        Expanded(
+                          flex: 3,
+                          child: Container(
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(4.0),
+                              image: const DecorationImage(
+                                image: AssetImage("assets/bg_1234.jpg"),
+                                fit: BoxFit.cover,
+                              ),
                             ),
                           ),
                         ),
-                      ),
-                      const Expanded(flex: 1, child: SizedBox()),
-                      Expanded(
-                        flex: 1,
-                        child: Text(
-                          projects[index],
-                          style: GoogleFonts.montserrat(
-                            color: Colors.black,
-                            fontSize: (width * height) / 50 * 0.0007,
-                            fontWeight: FontWeight.w600,
+                        const Expanded(flex: 1, child: SizedBox()),
+                        Expanded(
+                          flex: 1,
+                          child: Text(
+                            projects[index],
+                            style: GoogleFonts.montserrat(
+                              color: Colors.black,
+                              fontSize: (width * height) / 50 * 0.0007,
+                              fontWeight: FontWeight.w600,
+                            ),
+                            maxLines: 2,
+                            overflow: TextOverflow.ellipsis,
+                            textAlign: TextAlign.center,
                           ),
-                          maxLines: 2,
-                          overflow: TextOverflow.ellipsis,
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                 );
               },
