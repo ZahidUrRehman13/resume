@@ -167,224 +167,190 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
-                    Container(
-                      height: height * 0.075,
-                      width: width * 0.075,
-                      decoration: BoxDecoration(
-                        shape: BoxShape.circle,
-                        border: Border.all(
-                          color: Colors.white,
-                          width: 1, // Set the border width
-                        ),
-                        // borderRadius: BorderRadius.circular(10.0),
-                      ),
-                      child: Center(
-                        // child: Icon(Icons.apple,color: Colors.white,size: 50.00,),
-                        child: Container(
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(15.0),
-                            image: const DecorationImage(
-                              image: AssetImage(
-                                "assets/flutter.png",
-                              ),
-                              fit: BoxFit.cover,
-                            ),
+                    Column(
+                      children: [
+                        CircleAvatar(
+                          backgroundImage: const AssetImage(
+                            "assets/flutter.png",
                           ),
-                          height: 35,
-                          width: 35,
+                          radius: (height*width)/50*0.001,
+                          backgroundColor: Colors.transparent,
                         ),
-                      ),
-                    ),
-                    Container(
-                      height: height * 0.075,
-                      width: width * 0.075,
-                      decoration: BoxDecoration(
-                        shape: BoxShape.circle,
-                        border: Border.all(
-                          color: Colors.white,
-                          width: 1, // Set the border width
-                        ),
-                        // borderRadius: BorderRadius.circular(10.0),
-                      ),
-                      child: Center(
-                        // child: Icon(Icons.apple,color: Colors.white,size: 50.00,),
-                        child: Container(
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(15.0),
-                            image: const DecorationImage(
-                              image: AssetImage(
-                                "assets/android.png",
-                              ),
-                              fit: BoxFit.cover,
+                        Padding(
+                          padding: const EdgeInsets.only(top: 4.0),
+                          child: Text(
+                            "Flutter",
+                            style: GoogleFonts.roboto(
+                              color: Colors.white,
+                              fontSize: (width * height) / 50*0.0005,
+                              fontWeight: FontWeight.w600,
                             ),
+                            overflow: TextOverflow.ellipsis,
                           ),
-                          height: 50,
-                          width: 50,
                         ),
-                      ),
+                      ],
                     ),
-                    Container(
-                      height: height * 0.075,
-                      width: width * 0.075,
-                      decoration: BoxDecoration(
-                        shape: BoxShape.circle,
-                        border: Border.all(
-                          color: Colors.white,
-                          width: 1, // Set the border width
+                    Column(
+                      children: [
+                        CircleAvatar(
+                          backgroundImage: const AssetImage(
+                            "assets/android.png",
+                          ),
+                          radius: (height*width)/50*0.001,
+                          backgroundColor: Colors.transparent,
                         ),
-                      ),
-                      child: Center(
-                        // child: Icon(Icons.apple,color: Colors.white,size: 50.00,),
-                        child: Container(
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(15.0),
-                            image: const DecorationImage(
-                              image: AssetImage(
-                                "assets/apple-logo.png",
-                              ),
-                              fit: BoxFit.cover,
+                        Padding(
+                          padding: const EdgeInsets.only(top: 4.0),
+                          child: Text(
+                            "Android",
+                            style: GoogleFonts.roboto(
+                              color: Colors.white,
+                              fontSize: (width * height) / 50*0.0005,
+                              fontWeight: FontWeight.w600,
                             ),
+                            overflow: TextOverflow.ellipsis,
                           ),
-                          height: 35,
-                          width: 35,
                         ),
-                      ),
+                      ],
                     ),
-                    Container(
-                      height: height * 0.075,
-                      width: width * 0.075,
-                      decoration: BoxDecoration(
-                        shape: BoxShape.circle,
-                        border: Border.all(
-                          color: Colors.white,
-                          width: 1, // Set the border width
+                    Column(
+                      children: [
+                        CircleAvatar(
+                          backgroundImage: const AssetImage(
+                            "assets/apple-logo.png",
+                          ),
+                          radius: (height*width)/50*0.001,
+                          backgroundColor: Colors.transparent,
                         ),
-                      ),
-                      child: Center(
-                        // child: Icon(Icons.apple,color: Colors.white,size: 50.00,),
-                        child: Container(
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(15.0),
-                            image: const DecorationImage(
-                              image: AssetImage(
-                                "assets/api.png",
-                              ),
-                              fit: BoxFit.cover,
+                        Padding(
+                          padding: const EdgeInsets.only(top: 4.0),
+                          child: Text(
+                            "IOS Apple",
+                            style: GoogleFonts.roboto(
+                              color: Colors.white,
+                              fontSize: (width * height) / 50*0.0005,
+                              fontWeight: FontWeight.w600,
                             ),
+                            overflow: TextOverflow.ellipsis,
                           ),
-                          height: 35,
-                          width: 35,
                         ),
-                      ),
+                      ],
                     ),
-                    Container(
-                      height: height * 0.075,
-                      width: width * 0.075,
-                      decoration: BoxDecoration(
-                        shape: BoxShape.circle,
-                        border: Border.all(
-                          color: Colors.white,
-                          width: 1, // Set the border width
+                    Column(
+                      children: [
+                        CircleAvatar(
+                          backgroundImage: const AssetImage(
+                            "assets/api.png",
+                          ),
+                          radius: (height*width)/50*0.001,
+                          backgroundColor: Colors.transparent,
                         ),
-                      ),
-                      child: Center(
-                        // child: Icon(Icons.apple,color: Colors.white,size: 50.00,),
-                        child: Container(
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(15.0),
-                            image: const DecorationImage(
-                              image: AssetImage(
-                                "assets/firebase.png",
-                              ),
-                              fit: BoxFit.cover,
+                        Padding(
+                          padding: const EdgeInsets.only(top: 4.0),
+                          child: Text(
+                            "API",
+                            style: GoogleFonts.roboto(
+                              color: Colors.white,
+                              fontSize: (width * height) / 50*0.0005,
+                              fontWeight: FontWeight.w600,
                             ),
+                            overflow: TextOverflow.ellipsis,
                           ),
-                          height: 35,
-                          width: 35,
                         ),
-                      ),
+                      ],
                     ),
-                    Container(
-                      height: height * 0.075,
-                      width: width * 0.075,
-                      decoration: BoxDecoration(
-                        shape: BoxShape.circle,
-                        border: Border.all(
-                          color: Colors.white,
-                          width: 1, // Set the border width
+                    Column(
+                      children: [
+                        CircleAvatar(
+                          backgroundImage: const AssetImage(
+                            "assets/firebase.png",
+                          ),
+                          radius: (height*width)/50*0.001,
+                          backgroundColor: Colors.transparent,
                         ),
-                      ),
-                      child: Center(
-                        // child: Icon(Icons.apple,color: Colors.white,size: 50.00,),
-                        child: Container(
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(15.0),
-                            image: const DecorationImage(
-                              image: AssetImage(
-                                "assets/Google-Play.png",
-                              ),
-                              fit: BoxFit.cover,
+                        Padding(
+                          padding: const EdgeInsets.only(top: 4.0),
+                          child: Text(
+                            "Firebase",
+                            style: GoogleFonts.roboto(
+                              color: Colors.white,
+                              fontSize: (width * height) / 50*0.0005,
+                              fontWeight: FontWeight.w600,
                             ),
+                            overflow: TextOverflow.ellipsis,
                           ),
-                          height: 35,
-                          width: 35,
                         ),
-                      ),
+                      ],
                     ),
-                    Container(
-                      height: height * 0.075,
-                      width: width * 0.075,
-                      decoration: BoxDecoration(
-                        shape: BoxShape.circle,
-                        border: Border.all(
-                          color: Colors.white,
-                          width: 1, // Set the border width
+                    Column(
+                      children: [
+                        CircleAvatar(
+                          backgroundImage: const AssetImage(
+                            "assets/Google-Play.png",
+                          ),
+                          radius: (height*width)/50*0.001,
+                          backgroundColor: Colors.transparent,
                         ),
-                      ),
-                      child: Center(
-                        // child: Icon(Icons.apple,color: Colors.white,size: 50.00,),
-                        child: Container(
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(15.0),
-                            image: const DecorationImage(
-                              image: AssetImage(
-                                "assets/Huawei_AppGallery.png",
-                              ),
-                              fit: BoxFit.cover,
+                        Padding(
+                          padding: const EdgeInsets.only(top: 4.0),
+                          child: Text(
+                            "Google Play store",
+                            style: GoogleFonts.roboto(
+                              color: Colors.white,
+                              fontSize: (width * height) / 50*0.0005,
+                              fontWeight: FontWeight.w600,
                             ),
+                            overflow: TextOverflow.ellipsis,
                           ),
-                          height: 35,
-                          width: 35,
                         ),
-                      ),
+                      ],
                     ),
-                    Container(
-                      height: height * 0.075,
-                      width: width * 0.075,
-                      decoration: BoxDecoration(
-                        shape: BoxShape.circle,
-                        border: Border.all(
-                          color: Colors.white,
-                          width: 1, // Set the border width
-                        ),
-                      ),
-                      child: Center(
-                        // child: Icon(Icons.apple,color: Colors.white,size: 50.00,),
-                        child: Container(
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(15.0),
-                            image: const DecorationImage(
-                              image: AssetImage(
-                                "assets/samsungStore.png",
-                              ),
-                              fit: BoxFit.cover,
-                            ),
-                          ),
-                          height: 35,
-                          width: 35,
-                        ),
-                      ),
-                    ),
+                    Column(
+                     children: [
+                       CircleAvatar(
+                         backgroundImage: const AssetImage(
+                           "assets/Huawei_AppGallery.png",
+                         ),
+                         radius: (height*width)/50*0.001,
+                         backgroundColor: Colors.transparent,
+                       ),
+                       Padding(
+                         padding: const EdgeInsets.only(top: 4.0),
+                         child: Text(
+                           "App Gallery",
+                           style: GoogleFonts.roboto(
+                             color: Colors.white,
+                             fontSize: (width * height) / 50*0.0005,
+                             fontWeight: FontWeight.w600,
+                           ),
+                           overflow: TextOverflow.ellipsis,
+                         ),
+                       ),
+                     ],
+                   ),
+                    Column(
+                     children: [
+                       CircleAvatar(
+                         backgroundImage: const AssetImage(
+                           "assets/samsungStore.png",
+                         ),
+                         radius: (height*width)/50*0.001,
+                         backgroundColor: Colors.transparent,
+                       ),
+                       Padding(
+                         padding: const EdgeInsets.only(top: 4.0),
+                         child: Text(
+                           "Samsung Store",
+                           style: GoogleFonts.roboto(
+                             color: Colors.white,
+                             fontSize: (width * height) / 50*0.0005,
+                             fontWeight: FontWeight.w600,
+                           ),
+                           overflow: TextOverflow.ellipsis,
+                         ),
+                       ),
+                     ],
+                   ),
                   ],
                 ),
               ),
@@ -1080,7 +1046,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                 height: 8.0,
               ),
               Text(
-                "Seven Koncepts Pvt limited",
+                "Broomstick – A Creative Content & Digital Innovation Agency",
                 style: GoogleFonts.montserrat(
                   color: Colors.black,
                   fontSize: 16.0,
@@ -1093,7 +1059,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                 height: 5.0,
               ),
               Text(
-                "August 2019",
+                "August 2020",
                 style: GoogleFonts.montserrat(
                   color: Colors.black,
                   fontSize: 14.0,
