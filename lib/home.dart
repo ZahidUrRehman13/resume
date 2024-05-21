@@ -15,18 +15,18 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
   late AnimationController _controller;
- List<String> projects = [
-   'Saraab app UAE',
-   'Ezziclean laundary booking Application UAE',
-   'Estisharati User & Consultants Application UAE',
-   'Animals Lovers Mobile Application UAE',
-   'Zahib Driver & Zahib User Application UAE',
-   'Asmaky User & Asmaky vendor Application UAE',
-   'Fatima online Abaya shopping Application UAE',
-   'Mado User & Mado restuarant Application UAE',
-   'UAE SAFETY MOBILE APP UAE',
-   'Novelflex Mobile app UAE',
- ];
+  List<String> projects = [
+    'Saraab app UAE',
+    'Ezziclean laundary booking Application UAE',
+    'Estisharati User & Consultants Application UAE',
+    'Animals Lovers Mobile Application UAE',
+    'Zahib Driver & Zahib User Application UAE',
+    'Asmaky User & Asmaky vendor Application UAE',
+    'Fatima online Abaya shopping Application UAE',
+    'Mado User & Mado restuarant Application UAE',
+    'UAE SAFETY MOBILE APP UAE',
+    'Novelflex Mobile app UAE',
+  ];
   @override
   void initState() {
     super.initState();
@@ -86,7 +86,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                           style: GoogleFonts.montserrat(
                             color: Colors.white,
                             // fontSize: 18.0,
-                            fontSize: (width * height) / 50*0.0015,
+                            fontSize: (width * height) / 50 * 0.0015,
                             fontWeight: FontWeight.w600,
                           ),
                           overflow: TextOverflow.ellipsis,
@@ -111,36 +111,47 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                           children: [
                             Row(
                               children: [
-                                const Icon(Icons.email,color: Colors.white,),
-                                const SizedBox(width: 5.0,),
+                                const Icon(
+                                  Icons.email,
+                                  color: Colors.white,
+                                ),
+                                const SizedBox(
+                                  width: 5.0,
+                                ),
                                 Text(
                                   "zahidrehman507@gmail.com",
                                   style: GoogleFonts.roboto(
                                     color: Colors.white,
-                                    fontSize: (width * height) / 50*0.0008,
+                                    fontSize: (width * height) / 50 * 0.0008,
                                     fontWeight: FontWeight.w600,
                                   ),
                                   overflow: TextOverflow.ellipsis,
                                 ),
                               ],
                             ),
-                            SizedBox(width: width*0.03,),
+                            SizedBox(
+                              width: width * 0.03,
+                            ),
                             Row(
                               children: [
-                                const Icon(Icons.phone,color: Colors.white,),
-                                const SizedBox(width: 5.0,),
+                                const Icon(
+                                  Icons.phone,
+                                  color: Colors.white,
+                                ),
+                                const SizedBox(
+                                  width: 5.0,
+                                ),
                                 Text(
                                   "+971561150021",
                                   style: GoogleFonts.roboto(
                                     color: Colors.white,
-                                    fontSize: (width * height) / 50*0.0008,
+                                    fontSize: (width * height) / 50 * 0.0008,
                                     fontWeight: FontWeight.w600,
                                   ),
                                   overflow: TextOverflow.ellipsis,
                                 ),
                               ],
                             ),
-                        
                           ],
                         ),
                       ),
@@ -152,13 +163,12 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
             Positioned(
               top: height * 0.14,
               left: width * 0.72,
-              child:   CircleAvatar(
+              child: CircleAvatar(
                 backgroundImage: const AssetImage("assets/zahid.png"),
                 backgroundColor: Colors.white,
-                radius: height*width*0.000015,
+                radius: height * width * 0.000015,
               ),
             ),
-
             Positioned(
               top: height * 0.4,
               left: width * 0.01,
@@ -173,7 +183,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                           backgroundImage: const AssetImage(
                             "assets/flutter.png",
                           ),
-                          radius: (height*width)/50*0.001,
+                          radius: (height * width) / 50 * 0.001,
                           backgroundColor: Colors.transparent,
                         ),
                         Padding(
@@ -182,7 +192,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                             "Flutter",
                             style: GoogleFonts.roboto(
                               color: Colors.white,
-                              fontSize: (width * height) / 50*0.0005,
+                              fontSize: (width * height) / 50 * 0.0005,
                               fontWeight: FontWeight.w600,
                             ),
                             overflow: TextOverflow.ellipsis,
@@ -196,7 +206,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                           backgroundImage: const AssetImage(
                             "assets/android.png",
                           ),
-                          radius: (height*width)/50*0.001,
+                          radius: (height * width) / 50 * 0.001,
                           backgroundColor: Colors.transparent,
                         ),
                         Padding(
@@ -205,7 +215,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                             "Android",
                             style: GoogleFonts.roboto(
                               color: Colors.white,
-                              fontSize: (width * height) / 50*0.0005,
+                              fontSize: (width * height) / 50 * 0.0005,
                               fontWeight: FontWeight.w600,
                             ),
                             overflow: TextOverflow.ellipsis,
@@ -219,7 +229,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                           backgroundImage: const AssetImage(
                             "assets/apple-logo.png",
                           ),
-                          radius: (height*width)/50*0.001,
+                          radius: (height * width) / 50 * 0.001,
                           backgroundColor: Colors.transparent,
                         ),
                         Padding(
@@ -228,7 +238,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                             "IOS Apple",
                             style: GoogleFonts.roboto(
                               color: Colors.white,
-                              fontSize: (width * height) / 50*0.0005,
+                              fontSize: (width * height) / 50 * 0.0005,
                               fontWeight: FontWeight.w600,
                             ),
                             overflow: TextOverflow.ellipsis,
@@ -242,7 +252,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                           backgroundImage: const AssetImage(
                             "assets/api.png",
                           ),
-                          radius: (height*width)/50*0.001,
+                          radius: (height * width) / 50 * 0.001,
                           backgroundColor: Colors.transparent,
                         ),
                         Padding(
@@ -251,7 +261,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                             "API",
                             style: GoogleFonts.roboto(
                               color: Colors.white,
-                              fontSize: (width * height) / 50*0.0005,
+                              fontSize: (width * height) / 50 * 0.0005,
                               fontWeight: FontWeight.w600,
                             ),
                             overflow: TextOverflow.ellipsis,
@@ -265,7 +275,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                           backgroundImage: const AssetImage(
                             "assets/firebase.png",
                           ),
-                          radius: (height*width)/50*0.001,
+                          radius: (height * width) / 50 * 0.001,
                           backgroundColor: Colors.transparent,
                         ),
                         Padding(
@@ -274,7 +284,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                             "Firebase",
                             style: GoogleFonts.roboto(
                               color: Colors.white,
-                              fontSize: (width * height) / 50*0.0005,
+                              fontSize: (width * height) / 50 * 0.0005,
                               fontWeight: FontWeight.w600,
                             ),
                             overflow: TextOverflow.ellipsis,
@@ -288,7 +298,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                           backgroundImage: const AssetImage(
                             "assets/Google-Play.png",
                           ),
-                          radius: (height*width)/50*0.001,
+                          radius: (height * width) / 50 * 0.001,
                           backgroundColor: Colors.transparent,
                         ),
                         Padding(
@@ -297,7 +307,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                             "Google Play store",
                             style: GoogleFonts.roboto(
                               color: Colors.white,
-                              fontSize: (width * height) / 50*0.0005,
+                              fontSize: (width * height) / 50 * 0.0005,
                               fontWeight: FontWeight.w600,
                             ),
                             overflow: TextOverflow.ellipsis,
@@ -306,83 +316,83 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                       ],
                     ),
                     Column(
-                     children: [
-                       CircleAvatar(
-                         backgroundImage: const AssetImage(
-                           "assets/Huawei_AppGallery.png",
-                         ),
-                         radius: (height*width)/50*0.001,
-                         backgroundColor: Colors.transparent,
-                       ),
-                       Padding(
-                         padding: const EdgeInsets.only(top: 4.0),
-                         child: Text(
-                           "App Gallery",
-                           style: GoogleFonts.roboto(
-                             color: Colors.white,
-                             fontSize: (width * height) / 50*0.0005,
-                             fontWeight: FontWeight.w600,
-                           ),
-                           overflow: TextOverflow.ellipsis,
-                         ),
-                       ),
-                     ],
-                   ),
+                      children: [
+                        CircleAvatar(
+                          backgroundImage: const AssetImage(
+                            "assets/Huawei_AppGallery.png",
+                          ),
+                          radius: (height * width) / 50 * 0.001,
+                          backgroundColor: Colors.transparent,
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(top: 4.0),
+                          child: Text(
+                            "App Gallery",
+                            style: GoogleFonts.roboto(
+                              color: Colors.white,
+                              fontSize: (width * height) / 50 * 0.0005,
+                              fontWeight: FontWeight.w600,
+                            ),
+                            overflow: TextOverflow.ellipsis,
+                          ),
+                        ),
+                      ],
+                    ),
                     Column(
-                     children: [
-                       CircleAvatar(
-                         backgroundImage: const AssetImage(
-                           "assets/samsungStore.png",
-                         ),
-                         radius: (height*width)/50*0.001,
-                         backgroundColor: Colors.transparent,
-                       ),
-                       Padding(
-                         padding: const EdgeInsets.only(top: 4.0),
-                         child: Text(
-                           "Samsung Store",
-                           style: GoogleFonts.roboto(
-                             color: Colors.white,
-                             fontSize: (width * height) / 50*0.0005,
-                             fontWeight: FontWeight.w600,
-                           ),
-                           overflow: TextOverflow.ellipsis,
-                         ),
-                       ),
-                     ],
-                   ),
+                      children: [
+                        CircleAvatar(
+                          backgroundImage: const AssetImage(
+                            "assets/samsungStore.png",
+                          ),
+                          radius: (height * width) / 50 * 0.001,
+                          backgroundColor: Colors.transparent,
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(top: 4.0),
+                          child: Text(
+                            "Samsung Store",
+                            style: GoogleFonts.roboto(
+                              color: Colors.white,
+                              fontSize: (width * height) / 50 * 0.0005,
+                              fontWeight: FontWeight.w600,
+                            ),
+                            overflow: TextOverflow.ellipsis,
+                          ),
+                        ),
+                      ],
+                    ),
                   ],
                 ),
               ),
             ),
             Positioned(
-              top: height * 0.04,
-              left: width * 0.85,
-              child: AnimatedBuilder(
-                animation: _controller,
-                builder: (context, child) {
-                  return Container(
-                    padding: const EdgeInsets.all(8.0),
-                    decoration: BoxDecoration(
-                      color: Colors.yellow.withOpacity(_controller.value),
-                      borderRadius: BorderRadius.circular(3.0),
-                    ),
-                    child: Opacity(
-                      opacity: _controller.value,
-                      child:  Text(
-                        'Available immediately',
-                        style: GoogleFonts.lato(
-                          color: Colors.black,
-                          fontSize: 13.0,
-                          fontWeight: FontWeight.w800,
+                top: height * 0.04,
+                left: width * 0.85,
+                child: AnimatedBuilder(
+                  animation: _controller,
+                  builder: (context, child) {
+                    return Container(
+                      padding: const EdgeInsets.all(8.0),
+                      decoration: BoxDecoration(
+                        color: Colors.yellow.withOpacity(_controller.value),
+                        borderRadius: BorderRadius.circular(3.0),
+                      ),
+                      child: Opacity(
+                        opacity: _controller.value,
+                        child: Center(
+                          child: Text(
+                            'Available',
+                            style: GoogleFonts.lato(
+                              color: Colors.black,
+                              fontSize: (width * height) / 50 * 0.0005,
+                              fontWeight: FontWeight.w800,
+                            ),
+                          ),
                         ),
                       ),
-                    ),
-                  );
-                },
-              )
-            ),
-
+                    );
+                  },
+                )),
           ],
         ),
         Padding(
@@ -1921,15 +1931,14 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                 return Card(
                   elevation: 4,
                   margin: const EdgeInsets.all(16),
+                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(3.0)),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
                       Expanded(
-                        flex:3,
+                        flex: 3,
                         child: Container(
-                          height: height * 0.2,
-                          width: width * 0.35,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
                             image: const DecorationImage(
@@ -1939,16 +1948,14 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                           ),
                         ),
                       ),
-                      const Expanded(
-                        flex: 1,
-                          child: SizedBox()),
+                      const Expanded(flex: 1, child: SizedBox()),
                       Expanded(
                         flex: 1,
                         child: Text(
                           projects[index],
                           style: GoogleFonts.montserrat(
                             color: Colors.black,
-                            fontSize: 13.0,
+                            fontSize: (width * height) / 50 * 0.0007,
                             fontWeight: FontWeight.w600,
                           ),
                           maxLines: 2,
@@ -2118,7 +2125,6 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                   ),
                 ],
               ),
-
             ],
           ),
         ),
