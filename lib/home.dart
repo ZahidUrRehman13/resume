@@ -62,9 +62,12 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
     super.dispose();
   }
 
-  Future<void> _launchInBrowserView(Uri url) async {
-    if (!await launchUrl(url, mode: LaunchMode.inAppBrowserView)) {
-      throw Exception('Could not launch $url');
+
+  void _launchURL(Uri url) async {
+    if (await canLaunchUrl(url)) {
+      await launchUrl(url);
+    } else {
+      throw 'Could not launch $url';
     }
   }
 
@@ -1957,7 +1960,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                 return InkWell(
                   onTap: () {
                     if (urls[index].isNotEmpty) {
-                      _launchInBrowserView(Uri.parse(urls[index]));
+                      _launchURL(Uri.parse(urls[index]));
                     } else {
                       final snackBar = SnackBar(
                         content: Text(
